@@ -1,0 +1,1390 @@
+{
+	"info": {
+		"_postman_id": "ec7ca6d3-e973-414b-8d90-48d7f8a6e362",
+		"name": "Shohnaty",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2164874"
+	},
+	"item": [
+		{
+			"name": "العميل",
+			"item": [
+				{
+					"name": "الدخول",
+					"item": [
+						{
+							"name": "تسجيل حساب",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "c64c18c5-18e1-4fbd-a729-f48276370241"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "new test",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "01010521111",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "123456789",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "تسجيل دخول",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "ae07e015-6130-4fbe-8a08-a3973a2ab497"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "01010521111",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "اعادة تعيين كلمة المرور",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "f62b05ac-f84d-426a-845c-5d91f97bd052"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "01010529966",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/reset",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"reset"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "البروفايل",
+					"item": [
+						{
+							"name": "تحديث البيانات الشخصية",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|tNhqzD3JV2oILpOwhO7QPEoaYuGmDFwogmPMIn348180bf2c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "6a80bf5d-8648-40d0-bf33-f91dec05e381"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "محمد كارم توفيق",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "0101010100",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/update_profile",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"update_profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "تغيير كلمة المرور",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|s80LFYIWtvAfCR47EDWHKgqpgI2SKb867t86kSzD2f19a12d",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "3b5a710f-44ca-4fff-80f9-71a39ec595ac"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "old_password",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "new_password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/change_password",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"change_password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "تحديث الصورة الشخصية",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|tNhqzD3JV2oILpOwhO7QPEoaYuGmDFwogmPMIn348180bf2c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "674eda9c-3873-42f4-9a8d-45347591c295"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/Work/Test Data/1.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/update_profile_picture",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"update_profile_picture"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "حذف الحساب",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|tNhqzD3JV2oILpOwhO7QPEoaYuGmDFwogmPMIn348180bf2c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "c1869dc5-2c92-487b-a15f-18f6eda3dec5"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/delete_account",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"delete_account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "عرض البروفايل",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "6|wXH6lByULnSfPTehfwj85UMvyyVkm54CcWyt85cu64639123",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "58c2b557-8184-40c1-a97d-04b10363a7ed"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/show_profile",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"show_profile"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "الطلبات",
+					"item": [
+						{
+							"name": "انشاء طلب",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "6|wXH6lByULnSfPTehfwj85UMvyyVkm54CcWyt85cu64639123",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "9e78d33a-8330-4039-992a-811aa18fb1a3"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "شحنة بصل",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "150 طن",
+											"type": "text"
+										},
+										{
+											"key": "car",
+											"value": "نقل",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "010151515151",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2024-02-01 13:15:00",
+											"type": "text"
+										},
+										{
+											"key": "note",
+											"value": "شحنة بصل مستعجلة",
+											"type": "text"
+										},
+										{
+											"key": "load_street",
+											"value": "شارع قناة السويس",
+											"type": "text"
+										},
+										{
+											"key": "load_city",
+											"value": "المنصورة",
+											"type": "text"
+										},
+										{
+											"key": "load_region",
+											"value": "المحافظة",
+											"type": "text"
+										},
+										{
+											"key": "load_state",
+											"value": "الدقهلية",
+											"type": "text"
+										},
+										{
+											"key": "load_building_number",
+											"value": "15",
+											"type": "text"
+										},
+										{
+											"key": "load_lng",
+											"value": "12.105185841",
+											"type": "text"
+										},
+										{
+											"key": "load_lat",
+											"value": "12.105185841",
+											"type": "text"
+										},
+										{
+											"key": "delivery_street",
+											"value": "شارع خالد ابن الوليد",
+											"type": "text"
+										},
+										{
+											"key": "delivery_city",
+											"value": "مدينة نصر",
+											"type": "text"
+										},
+										{
+											"key": "delivery_region",
+											"value": "مدينة نصر",
+											"type": "text"
+										},
+										{
+											"key": "delivery_state",
+											"value": "القاهرة",
+											"type": "text"
+										},
+										{
+											"key": "delivery_building_number",
+											"value": "22",
+											"type": "text"
+										},
+										{
+											"key": "delivery_lat",
+											"value": "22.1514",
+											"type": "text"
+										},
+										{
+											"key": "delivery_lng",
+											"value": "22.1518",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "200",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/store_order",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"store_order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "عرض طلب",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|gLP8cEsYyLIxgzrbCN2DkZD17jSr07KFNZSKwPeA71f281ca",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "",
+										"uuid": "f7a97a21-9603-4847-94c8-5925b0433e35"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/show_order/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"show_order",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "حذف طلب",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|gLP8cEsYyLIxgzrbCN2DkZD17jSr07KFNZSKwPeA71f281ca",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "",
+										"uuid": "abad1b7f-ac44-4b43-9b09-3bce1127f7bf"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/delete_order/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"delete_order",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "كل الطلبات - بالحالات",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|gLP8cEsYyLIxgzrbCN2DkZD17jSr07KFNZSKwPeA71f281ca",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"uuid": "04e645bf-829d-476c-b8b2-98342286b1e5"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/user/list_orders?status=pending",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"list_orders"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "pending"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "السائق",
+			"item": [
+				{
+					"name": "الدخول",
+					"item": [
+						{
+							"name": "تسجيل حساب",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "fb34975e-0342-43c6-b38a-9985f1e3b4a4"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "new driver",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "01010522356",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "identity_number",
+											"value": "29214147845414",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "استكمال التسجيل",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "80ba27d0-e377-4e7b-a493-df8c6f63c2b4"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "driver_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "plate_number",
+											"value": "214484",
+											"type": "text"
+										},
+										{
+											"key": "car_type",
+											"value": "تويوتا",
+											"type": "text"
+										},
+										{
+											"key": "car_license",
+											"type": "file",
+											"src": "/D:/Work/Test Data/1.jpg"
+										},
+										{
+											"key": "driving_license",
+											"type": "file",
+											"src": "/D:/Work/Test Data/2.jpg"
+										},
+										{
+											"key": "accessories[0]",
+											"value": "بوم",
+											"type": "text"
+										},
+										{
+											"key": "accessories[1]",
+											"value": "سلب",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/complete_register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"complete_register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "تسجيل دخول",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "5f2609c0-21fd-4dd8-a1ca-5510f35f9ceb"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "01010522356",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "اعادة تعيين كلمة المرور",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "d5180f64-cad1-4d33-8aac-0fd439e8ed43"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "01010529966",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/reset",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"reset"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "البروفايل",
+					"item": [
+						{
+							"name": "تحديث البيانات الشخصية",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|EflolACeSUH6BeSxFFy5hyDlSSA1g5hl1WX6IG7Of8fa0510",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "37946b60-1774-4cf0-93ef-7287291c2658"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "محمد كارم توفيق",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "0101010100",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/update_profile",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"update_profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "تغيير كلمة المرور",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|s80LFYIWtvAfCR47EDWHKgqpgI2SKb867t86kSzD2f19a12d",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "5c478de2-3a4f-4189-b36f-148623d7ff22"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "old_password",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "new_password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/change_password",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"change_password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "تحديث الصورة الشخصية",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|tNhqzD3JV2oILpOwhO7QPEoaYuGmDFwogmPMIn348180bf2c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "ad52e698-53cb-4b20-ace9-367ea3645db4"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/Work/Test Data/1.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/update_profile_picture",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"update_profile_picture"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "حذف الحساب",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|tNhqzD3JV2oILpOwhO7QPEoaYuGmDFwogmPMIn348180bf2c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "069c9119-5f8c-4679-b027-428aa7b4ce8d"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/delete_account",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"delete_account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "عرض البروفايل",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|EflolACeSUH6BeSxFFy5hyDlSSA1g5hl1WX6IG7Of8fa0510",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "c1459f0a-4c9e-4142-a1bf-d61d6f946eca"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/show_profile",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"show_profile"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "الطلبات",
+					"item": [
+						{
+							"name": "قبول طلب",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "7|4YFE4H13gLoyCcKQ0eLPo99Y95y8HPwJTh9nSxOb3f933a06",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "c5d72037-9563-4e9e-a086-fcc10cfc28f9"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/assign/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"assign",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "استكمال طلب",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "4|94Jz9rpOh634yrfFkPY47KYUODGLWMvs8kPWIouM45efda2a",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"uuid": "71dca35a-5bce-4d47-980c-c1d57be8ffa7"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/complete/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"complete",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "كل الطلبات - بالحالات",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "7|4YFE4H13gLoyCcKQ0eLPo99Y95y8HPwJTh9nSxOb3f933a06",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"uuid": "5934f678-06b6-41a8-9d4e-cdf1abfdb633"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/get_orders?status=completed",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"get_orders"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "completed",
+											"description": "in_progress / completed"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "الطلبات المتاحة",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|52LkHpfDCOMIpdHMACKnfio04bJ6qsniK0PZDi5U359179e4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.api+json",
+										"uuid": "e2fe99ef-fb6c-4e90-abe9-b5d476b39b71"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/new_orders",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"new_orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "المحفظة",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "4|94Jz9rpOh634yrfFkPY47KYUODGLWMvs8kPWIouM45efda2a",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/driver/wallet",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"driver",
+										"wallet"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
